@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body {
+
+    width: 100%;
+    background: linear-gradient(180deg, rgba(64, 27, 92, 1) 0%, rgba(134, 57, 194, 1) 35%);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+li {
+    color: white;
+}
+
+h1,
+p {
+    color: white;
+}
+
+main {
+    display: flex;
+    padding-bottom: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main a {
+    color: white;
+    background-color: #401B5C;
+    margin-left: 180px;
+    padding: 10px;
+    border-radius: 25px;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+}
+
+main a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(173, 23, 173);
+}
+
+.carousel {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.carousel img {
+    height: 330px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.acainatural img {
+    height: 150px;
+    width: 200px;
+
+}
+.button-57 {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #18181a;
+    color: black;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 18px 18px 17px;
+    text-decoration: none;
+    cursor: pointer;
+    background: gold;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-57 span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+  }
+  
+  .button-57 span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+  }
+  
+  .button-57:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+  }
+  
+  .button-57:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+  }
+  
+  .button-57:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  }
+  .Motoboy{
+    position: absolute;
+    width: 300px;
+    animation: mover 4.5s linear infinite;
+    
+}
+
+@keyframes mover {
+  0% { right: 400px; transform: scaleX(1); }  /* Normal */
+  50% { right: 0px; transform: scaleX(1); }   /* Chega ao ponto inicial */
+  51% { right: 0px; transform: scaleX(-1); }  /* Vira para voltar */
+  100% { right: 400px; transform: scaleX(-1); } /* Volta invertida */
+}
+
+.moving-element {
+  position: absolute;  /* Necessário para usar right */
+  animation: mover 2s linear infinite;
+}
+
